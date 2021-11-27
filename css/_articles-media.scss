@@ -1,0 +1,17 @@
+//Tablets
+@media (max-width: $tablet) {
+    #articles {
+        &-b {
+            .newsletter-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+
+                &-item:last-child {
+                    justify-self: initial;
+                }
+            }
+        }
+    }
+
+
+}

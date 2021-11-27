@@ -1,0 +1,84 @@
+@media(max-width: $s-laptop) {
+    #header {
+        &-about {
+            .header-about-box {
+                grid-template-areas: 
+            '. about2'
+            'about1 about2'
+            'about3 about2'
+            'about3 about2'
+            'about3 about2'
+            ;
+            }
+
+            &:before {
+                height: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    #about {
+        &-a {
+            .values-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    #header {
+        &-about {
+            padding: 8rem 0 3rem;
+
+            .header-about-box {
+                height: 100%;
+                grid-template-columns: 1fr;
+                grid-gap: 1rem;
+                grid-template-areas: 
+                'about1'
+                'about2'
+                'about3'
+                ;
+            }
+
+            &:before {
+                height: 35%;
+            }
+        }
+    }
+
+    #about {
+        &-a {
+            .values-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-b {
+            .about-box {
+                flex-direction: column;
+            }
+        }
+
+        &-c {
+            .team-box {
+                grid-template-columns: 1fr;
+
+                &-item {
+                    &-img {
+                        height: 80%;
+                    }
+                }
+            }
+        }
+
+        &-d {
+            .story-box {
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+//Tablets
+@media (max-width: $tablet) {
+    html {
+        font-size: 80%;
+    }
+
+    #home {
+        &-d {
+            .articles-box {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: 
+                'card1 card1'
+                'card1 card1'
+                'card2 card3'
+                'card4 card5'
+                ;
+            }
+        }
+
+        &-e {
+            &:before {
+                width: 100%;
+                height: 40%;
+                bottom: 0;
+                top: initial;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: initial;
+            }
+        }
+    }
+}
+
+// Mobile
+@media(max-width: $mobile) {
+    html {
+        font-size: 65%;
+    }
+
+    #header {
+        &-home {
+            height: 100%;
+            padding: 5rem 0;
+
+            &:before {
+                bottom: 0;
+                top: initial;
+                height: 30%;
+                width: 100%;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                align-items: initial;
+                gap: 5rem;
+
+                .header-home-img {
+                    align-self: center;
+                    height: 20rem;
+                    width: 90%;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #home {
+        &-a {
+            .menu-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-b {
+            padding: 6rem 0;
+
+            .about-box {
+                flex-direction: column-reverse;
+                align-items: initial;
+
+                &-item-1 {
+                    display: initial;
+
+                    &-items {
+                        position: initial;
+                        background: initial;
+                        box-shadow: none;
+                        padding: 2rem 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &-c {
+            .testimonials-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-d {
+            .articles-box {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                'card1'
+                'card2'
+                'card3'
+                'card4'
+                'card5'
+                ;
+
+                &-item {
+                    img {
+                        height: initial;
+                    }
+
+                    div {
+                        padding-left: 1rem;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        &-e {
+            .contact-container {
+
+                .contact-2 {
+
+                    form {
+                        grid-template-columns: 1fr;
+                        grid-template-areas: 
+                        'name'
+                        'email'
+                        'phone'
+                        'location'
+                        'date'
+                        'note'
+                        ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Wide Screen
+@media (min-width: $wide-screen) {
+    #header {
+        &-home {
+            &:before {
+                width: 40%;
+            }
+        }
+    }
+}
+
+// Small Phones
+@media(max-width: $s-mobile) {
+    html {
+        font-size: 50%;
+    }
+}

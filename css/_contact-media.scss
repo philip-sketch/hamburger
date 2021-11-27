@@ -1,0 +1,41 @@
+@media(max-width: $tablet) {
+    #header {
+        &-contact {
+            &:before {
+                width: 100%;
+                height: 40%;
+                bottom: 0;
+                top: initial;
+            }
+    
+            .contact-container {
+                flex-direction: column;
+                align-items: initial;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    #header {
+        &-contact {
+            .contact-container {
+
+                .contact-2 {
+
+                    form {
+                        grid-template-columns: 1fr;
+                        grid-template-areas: 
+                        'name'
+                        'email'
+                        'phone'
+                        'location'
+                        'date'
+                        'note'
+                        ;
+                    }
+                }
+            }
+        }
+    }
+}
